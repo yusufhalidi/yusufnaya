@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Couple ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      padding: 30px;
+      color: white;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+
+    .heart {
+      font-size: 30px;
+      animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 800px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .love-text {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #e63950;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 15px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Yusuf ❤️ Naya</h1>
+  <p class="heart">❤️</p>
+  <p>Website sederhana tentang kisah kita berdua</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>📸 Kenangan Kita</h2>
+    <div class="gallery">
+      <!-- GANTI DENGAN FOTO KAMU -->
+      <img src="1.PNG" alt="foto1">
+      <img src="https://via.placeholder.com/300x200" alt="foto2">
+      <img src="https://via.placeholder.com/300x200" alt="foto3">
+      <img src="https://via.placeholder.com/300x200" alt="foto4">
+    </div>
+    <p class="love-text">Setiap foto ini punya cerita indah yang ga akan aku lupain 💕</p>
+  </div>
+
+  <div class="card">
+    <h2>💌 Pesan Untuk Kamu</h2>
+    <p class="love-text">
+      Terima kasih sudah hadir di hidup aku.
+      Kamu adalah alasan aku tersenyum setiap hari ❤️
+    </p>
+    <button onclick="alert('Aku sayang kamu banget ❤️')">Klik Ini</button>
+  </div>
+
+  <div class="card">
+    <h2>⏳ Lama Hubungan Kita</h2>
+    <p id="timer"></p>
+  </div>
+
+  <div class="card">
+    <h2>🎵 Lagu Kita</h2>
+    <!-- GANTI DENGAN LAGU KAMU (.mp3) -->
+    <audio controls autoplay loop>
+      <source src="Christina Perri - A thousand years.mp3" type="audio/mpeg">
+      Browser tidak mendukung audio.
+    </audio>
+    <p class="love-text">Lagu ini selalu ngingetin aku ke kamu ❤️</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Yusuf ❤️ Naya</p>
+</footer>
+
+<script>
+  // GANTI TANGGAL JADIAN DI SINI
+  const startDate = new Date("2026-01-01");
+
+  function updateTime() {
+    const now = new Date();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+    document.getElementById("timer").innerHTML =
+      days + " hari " + hours + " jam " + minutes + " menit ❤️";
+  }
+
+  setInterval(updateTime, 1000);
+</script>
+
+</body>
+</html>
