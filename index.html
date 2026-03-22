@@ -46,7 +46,24 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .love-text {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
     button {
       margin-top: 15px;
       padding: 10px 20px;
@@ -153,33 +170,6 @@
 
   setInterval(updateTime, 1000);
 </script>
-<script>
-    // Fungsi untuk memperbesar foto
-    function bukaLightbox(sumberGambar) {
-        document.getElementById("myLightbox").style.display = "block";
-        document.getElementById("lightbox-img").src = sumberGambar;
-    }
 
-    // Fungsi untuk menutup foto yang membesar
-    function tutupLightbox() {
-        document.getElementById("myLightbox").style.display = "none";
-    }
-
-    // Fungsi untuk tombol Lihat Semua / Sembunyikan
-    function lihatSemua() {
-        let fotoSembunyi = document.querySelectorAll('.foto-tambahan');
-        let tombol = document.getElementById('tombol-lihat');
-        
-        let isHidden = fotoSembunyi[0].style.display === "none";
-
-        if (isHidden) {
-            fotoSembunyi.forEach(foto => foto.style.display = "block");
-            tombol.innerText = "Sembunyikan Sebagian";
-        } else {
-            fotoSembunyi.forEach(foto => foto.style.display = "none");
-            tombol.innerText = "Lihat Semua Foto";
-        }
-    }
-</script>
 </body>
 </html>
