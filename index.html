@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yusuf ❤️ Naya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BACKGROUND ANIMASI HATI -->
+  <div class="hearts-bg" id="hearts-container"></div>
+
+  <!-- LAYER 1: HALAMAN LOGIN -->
+  <div id="login-overlay" class="login-container">
+    <div class="login-card">
+      <div class="heart-icon">🔒❤️</div>
+      <h2>Website Rahasia</h2>
+      <p>Khusus untuk Naya tersayang ✨</p>
+      
+      <form id="login-form">
+        <div class="input-group">
+          <input type="text" id="username" placeholder="Username" required autocomplete="off">
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <button type="submit" id="btn-login">Buka Kunci 💕</button>
+      </form>
+      
+      <p id="error-msg" class="error-msg"></p>
+    </div>
+  </div>
+
+  <!-- LAYER 2: KONTEN UTAMA WEBSITE -->
+  <div id="main-content" class="main-content">
+
+    <header>
+      <h1>Yusuf ❤️ Naya</h1>
+      <p class="heart-pulse">❤️</p>
+      <p class="subtitle">Website sederhana tentang kisah kita berdua</p>
+    </header>
+
+    <div class="container">
+
+      <!-- KARTU 1: GALERI FOTO -->
+      <div class="card glass">
+        <h2>📸 Kenangan Kita</h2>
+        <p class="sub-card">Klik foto untuk memperbesar ✨</p>
+        <div class="gallery">
+          <img src="1.jpg" alt="foto1" onclick="openLightbox(this)">
+          <img src="2.jpg" alt="foto2" onclick="openLightbox(this)">
+          <img src="3.jpg" alt="foto3" onclick="openLightbox(this)">
+          <img src="4.jpg" alt="foto4" onclick="openLightbox(this)">
+          <img src="5.jpg" alt="foto5" onclick="openLightbox(this)">
+          <img src="6.jpg" alt="foto6" onclick="openLightbox(this)">
+          <img src="7.jpg" alt="foto7" onclick="openLightbox(this)">
+          <img src="8.jpg" alt="foto8" onclick="openLightbox(this)">
+          <img src="9.jpg" alt="foto9" onclick="openLightbox(this)">
+          <img src="10.jpg" alt="foto10" onclick="openLightbox(this)">
+          <img src="11.jpg" alt="foto11" onclick="openLightbox(this)">
+          <img src="12.jpg" alt="foto12" onclick="openLightbox(this)">
+          <img src="13.jpg" alt="foto13" onclick="openLightbox(this)">
+        </div>
+        <p class="love-text">Setiap foto ini punya cerita indah yang ga akan aku lupain 💕</p>
+      </div>
+
+      <!-- KARTU 2: PESAN CINTA -->
+      <div class="card glass">
+        <h2>💌 Pesan Untuk Kamu</h2>
+        <p class="love-text">
+          Terima kasih sudah hadir di hidup aku.<br>
+          Kamu adalah alasan aku tersenyum setiap hari ❤️
+        </p>
+        <button class="btn-love" onclick="showLovePopup()">Klik Ini ✨</button>
+      </div>
+
+      <!-- KARTU 3: TIMER HUBUNGAN -->
+      <div class="card glass">
+        <h2>⏳ Lama Hubungan Kita</h2>
+        <div id="timer" class="timer-box">Loading...</div>
+      </div>
+
+      <!-- KARTU 4: LAGU KITA -->
+      <div class="card glass">
+        <h2>🎵 Lagu Kita</h2>
+        <audio id="bg-music" controls loop>
+          <source src="Christina Perri - A thousand years.mp3" type="audio/mpeg">
+          Browser tidak mendukung audio.
+        </audio>
+        <p class="love-text">Lagu ini selalu ngingetin aku ke kamu ❤️</p>
+      </div>
+
+    </div>
+
+    <footer>
+      <p>© 2026 Yusuf ❤️ Naya</p>
+    </footer>
+
+  </div>
+
+  <!-- POP-UP BUKA FOTO (LIGHTBOX) -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" src="" alt="Enlarged Photo">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
