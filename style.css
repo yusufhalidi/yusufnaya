@@ -16,10 +16,8 @@ body {
 /* --- ANIMASI BACKGROUND HATI --- */
 .hearts-bg {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
@@ -116,7 +114,107 @@ header h1 { font-size: 2.5rem; color: #ff85a2; text-shadow: 0 0 10px rgba(255,13
 }
 
 .card h2 { color: #ff85a2; margin-bottom: 10px; font-size: 1.5rem; }
-.sub-card { font-size: 0.85rem; color: #aaa; margin-bottom: 15px; }
+.sub-card { font-size: 0.85rem; color: #aaa; margin-bottom: 20px; }
+
+/* --- AMPLOP SURAT INTERAKTIF (FITUR 1) --- */
+.envelope-wrapper {
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.envelope {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  background: #ff758c;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.envelope:hover {
+  transform: translateY(-5px);
+}
+
+.envelope .front {
+  position: absolute;
+  width: 0; height: 0;
+  z-index: 3;
+}
+
+.envelope .flap {
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-top: 100px solid #ff4d6d;
+  transform-origin: top;
+  transition: transform 0.5s 0.2s, z-index 0.2s 0.2s;
+  top: 0; left: 0;
+}
+
+.envelope .pocket {
+  border-left: 140px solid #ff85a2;
+  border-right: 140px solid #ff85a2;
+  border-bottom: 90px solid #ff6584;
+  border-top: 90px solid transparent;
+  border-radius: 0 0 10px 10px;
+  bottom: 0; left: 0;
+}
+
+.envelope .heart-seal {
+  position: absolute;
+  top: 75px; left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  z-index: 4;
+  transition: opacity 0.3s;
+}
+
+.letter {
+  position: absolute;
+  top: 10px; left: 15px;
+  width: 250px; height: 160px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 2;
+  transition: transform 0.6s ease-in-out, z-index 0.1s 0.3s, height 0.6s, top 0.6s;
+  overflow: hidden;
+  text-align: left;
+}
+
+.letter-text h3 {
+  color: #ff4d6d; font-size: 1rem; margin-bottom: 8px; text-align: center;
+}
+.letter-text p {
+  font-size: 0.8rem; line-height: 1.4; color: #444;
+}
+.letter-text .signature {
+  margin-top: 10px; text-align: right; font-size: 0.8rem; color: #ff4d6d;
+}
+
+/* KONDISI AMPLOP KETIKA DIBUKA */
+.envelope.open .flap {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.envelope.open .heart-seal {
+  opacity: 0;
+}
+
+.envelope.open .letter {
+  transform: translateY(-120px) scale(1.15);
+  z-index: 5;
+  height: auto;
+  min-height: 220px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
 
 /* GALERI FOTO INTERAKTIF */
 .gallery {
@@ -136,14 +234,6 @@ header h1 { font-size: 2.5rem; color: #ff85a2; text-shadow: 0 0 10px rgba(255,13
 }
 
 .love-text { font-size: 1.05rem; margin-top: 15px; color: #eee; line-height: 1.5; }
-
-/* BUTTON PESAN */
-.btn-love {
-  margin-top: 15px; padding: 12px 25px; border: none; border-radius: 25px;
-  background: linear-gradient(45deg, #ff4d6d, #ff758c);
-  color: white; font-size: 1rem; font-weight: bold; cursor: pointer; transition: 0.3s;
-}
-.btn-love:hover { transform: scale(1.08); box-shadow: 0 5px 20px rgba(255, 77, 109, 0.5); }
 
 /* TIMER DISPLAY */
 .timer-box {

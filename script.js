@@ -24,7 +24,6 @@ loginForm.addEventListener('submit', function(e) {
     
     setTimeout(() => {
       mainContent.classList.add('show');
-      // Otomatis putar lagu saat login berhasil
       bgMusic.play().catch(e => console.log("Autoplay diblokir browser, pengguna bisa putar manual"));
     }, 400);
 
@@ -32,6 +31,12 @@ loginForm.addEventListener('submit', function(e) {
     errorMsg.innerText = "Username/Password salah, coba lagi yaa! 💕";
   }
 });
+
+// --- TOGGLE BUKA/TUTUP AMPLOP SURAT ---
+function openEnvelope() {
+  const envelope = document.getElementById('envelope');
+  envelope.classList.toggle('open');
+}
 
 // --- TIMER LAMA HUBUNGAN ---
 function updateTime() {
@@ -58,11 +63,6 @@ function openLightbox(element) {
 
 function closeLightbox() {
   document.getElementById('lightbox').style.display = 'none';
-}
-
-// --- POPUP PESAN KICK ---
-function showLovePopup() {
-  alert("Aku sayang banget sama kamu Naya! Makasih udah selalu ada buat aku ❤️✨");
 }
 
 // --- EFEK HATI MELAYANG DI BACKGROUND ---

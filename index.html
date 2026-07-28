@@ -43,7 +43,31 @@
 
     <div class="container">
 
-      <!-- KARTU 1: GALERI FOTO -->
+      <!-- KARTU 1: SURAT CINTA INTERAKTIF (AMPLOP 3D) -->
+      <div class="card glass">
+        <h2>💌 Surat Khusus Untukmu</h2>
+        <p class="sub-card">Klik amplop di bawah ini untuk membuka suratnya ✨</p>
+        
+        <div class="envelope-wrapper" onclick="openEnvelope()">
+          <div class="envelope" id="envelope">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter" id="letter">
+              <div class="letter-text">
+                <h3>Untuk Naya Tersayang ❤️</h3>
+                <p>
+                  Terima kasih ya sudah hadir di hidup aku.<br><br>
+                  Setiap hari bersamamu selalu terasa spesial. Kamu adalah alasan aku tersenyum dan selalu bersemangat setiap harinya. Semoga website kecil ini bisa bikin kamu tersenyum juga ya! 💕
+                </p>
+                <p class="signature">Dengan cinta,<br><b>Yusuf</b></p>
+              </div>
+            </div>
+            <div class="heart-seal">❤️</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KARTU 2: GALERI FOTO -->
       <div class="card glass">
         <h2>📸 Kenangan Kita</h2>
         <p class="sub-card">Klik foto untuk memperbesar ✨</p>
@@ -63,16 +87,6 @@
           <img src="13.jpg" alt="foto13" onclick="openLightbox(this)">
         </div>
         <p class="love-text">Setiap foto ini punya cerita indah yang ga akan aku lupain 💕</p>
-      </div>
-
-      <!-- KARTU 2: PESAN CINTA -->
-      <div class="card glass">
-        <h2>💌 Pesan Untuk Kamu</h2>
-        <p class="love-text">
-          Terima kasih sudah hadir di hidup aku.<br>
-          Kamu adalah alasan aku tersenyum setiap hari ❤️
-        </p>
-        <button class="btn-love" onclick="showLovePopup()">Klik Ini ✨</button>
       </div>
 
       <!-- KARTU 3: TIMER HUBUNGAN -->
