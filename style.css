@@ -111,7 +111,7 @@ header h1 { font-size: 2.2rem; color: #ff85a2; text-shadow: 0 0 10px rgba(255,13
   backdrop-filter: blur(8px);
   margin: 25px auto; padding: 25px; border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+  overflow: visible; /* <-- Bikin bagian atas gak kepotong */
 }
 
 .card h2 { color: #ff85a2; margin-bottom: 5px; font-size: 1.4rem; }
@@ -217,7 +217,7 @@ header h1 { font-size: 2.2rem; color: #ff85a2; text-shadow: 0 0 10px rgba(255,13
 }
 
 .envelope.open .letter {
-  transform: translateY(-110px);
+  transform: translateY(-60px);
   z-index: 5;
   height: auto;
   min-height: 210px;
